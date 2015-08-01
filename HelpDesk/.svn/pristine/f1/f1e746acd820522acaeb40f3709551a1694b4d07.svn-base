@@ -1,0 +1,195 @@
+﻿/*
+------------------------------------------
+	B A S E
+------------------------------------------ */
+@charset "utf-8";
+/* CSS Document */
+
+/*CSS-Reset*/
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {	margin: 0;	padding: 0;	border: 0;	font-size: 100%; font: inherit;	vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { background-color:#003469; background-image:url(../images/bg8.jpg); color:#000; font-family: Tahoma, Geneva, sans-serif; line-height:1; }
+/*line-height: 1; font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;*/
+form, p, table { font-size:13px; line-height:18px; }
+
+ol, ul {list-style: none; }
+blockquote, q {	quotes: none; }
+blockquote:before, blockquote:after,q:before, q:after {	content: ''; content: none; }
+table {	border-collapse: collapse;	border-spacing: 0; }
+div.clear { clear:both; } .on-left { float:left; } .on-right { float:right; }
+
+/*
+------------------------------------------
+	S T R U C T U R E
+------------------------------------------ */
+
+#main_container { max-width:1600px; min-width:1024px;   margin:0 auto 20px auto; }
+#main_content { background-color: #ccffff; padding:10px; }
+	#main_content #sidebar {  width:13%; float:left; }
+	#main_content #main_content_right {width:85%; margin-left:15%; padding-bottom:15px; }
+	
+#footer { background-color: #ccc; padding:10px; }	
+
+#header{ border-bottom:#181444 5px solid; border-top:#181444 2px solid; background:url(../images/header.jpg); height:114px;}
+	img.educational_logo { float:left; }
+	img.header { float:left; }
+	
+/*
+------------------------------------------
+	M E N U 
+------------------------------------------ */
+	
+	ul#user_menu { float:right; padding:10px 0;}
+	ul#user_menu li { float:left;}
+	ul#user_menu li a { color:#b2b2b2; font-size:14px; padding-left:15px;}
+	ul#user_menu li a.user_name { color:#fff;}
+	ul#user_menu li a:hover { text-decoration:underline;}
+	
+	ul#main_nav { clear:both; float:right; margin-top:-28px; }
+	ul#main_nav li { float:left;}
+	ul#main_nav li a { display:block; color:#fff; background:#1569a2; text-transform:uppercase; font-size:14px; padding:7px 12px; margin-left:1px;}
+	ul#main_nav li a.active, ul#main_nav li a.active:hover { background:#1c174f; text-decoration:none; }
+	ul#main_nav li a:hover { background:#114b72; text-decoration:none; }	
+
+/*
+------------------------------------------
+	H E A D I N G S
+------------------------------------------ */
+
+h1 { font-size:30px; }
+h2 { font-size:24px; }
+h3 { font-size:18px; }
+h4 { font-size:15px; font-weight:bold; }
+h1, h2, h3, h4, p { margin-bottom:10px; line-height: 1.5em; }
+
+/*
+------------------------------------------
+	L I N K S
+------------------------------------------ */
+
+a, a:visited, a:link { text-decoration:none; color:#0E58D6; }
+a:hover, a:active { text-decoration:underline; color:#0E58D6; }
+
+/*
+------------------------------------------
+	F O R M S
+------------------------------------------ */
+
+/*General*/
+fieldset legend { font-weight:bold; text-shadow:0 -1px 0 rgba(0,0,0,.2); }
+label { }
+
+/*Textbox and Textarea*/
+input.input, form textarea, form select { border: 1px solid #C4C4C4; outline:none; box-shadow:0 0 8px #D9D9D9; color: #999; margin-bottom: 5px; padding: 4px; -webkit-transition: 0.4s; -moz-transition: 0.4s; transition: 0.4s;}
+input.input, form select { height: 25px; }
+input.input:focus, form textarea:focus, form select:focus { box-shadow:inset 0px 1px 3px rgba(0,0,0,0.05), 0px 0px 8px #2467ef ; color:#000 !important; border:#2467ef 1px solid; -webkit-transition: 0.4s; -moz-transition: 0.4s; transition: 0.4s; }
+
+/*Checkboxes and Radio Buttions*/
+.radios { padding-top: 18px; /*background: url(divider.png) repeat-x 0 0;*/ }
+.input_checkeable input { margin-right: 5px; }
+.input_checkeable { padding-left: 34px; }
+.input_checkeable.radio_type1 { background:url(../images/checkbox-radio-btns/radio-off.png) no-repeat; }
+.input_checkeable.chk_type1 { background: url(../images/checkbox-radio-btns/check-off.png) no-repeat; }
+.input_checkeable.chk_type1.checked { background: url(../images/checkbox-radio-btns/check-on.png) no-repeat; }
+.input_checkeable.radio_type1.checked { background: url(../images/checkbox-radio-btns/radio-on.png) no-repeat; }
+.input_checkeable input { position: absolute; left: -9999px; }
+
+/*Diamond Checks*/ 
+.input_checkeable.radio_type2, .input_checkeable.radio_type3 { background: url(../images/checkbox-radio-btns/diamondDefault.png) no-repeat; }
+.input_checkeable.radio_type2.checked { background: url(../images/checkbox-radio-btns/diamondGreen.png) no-repeat; }
+.input_checkeable.radio_type3.checked { background: url(../images/checkbox-radio-btns/diamondRed.png) no-repeat; }
+
+/*Tablelesss Form0: Form Validator*/ 
+div.simple_form { width:270px; }
+div.simple_form fieldset { background:#fff; border:8px solid #fff; padding:5px 0; margin-top:-25px;}
+div.simple_form fieldset legend { font-size:16px; text-transform:uppercase; padding-top:35px; padding-bottom:10px; } 
+div.simple_form fieldset ul li label { float:left; padding-top:5px; } 
+div.simple_form fieldset ul li input { float:right; } 
+
+	/*AppDevForm*/		
+	#appdevformToolTip { padding:5px; background-color:#0081bd; color:#fff; box-shadow:0 0 5px #333; font-size:12px; border-radius:4px;}
+	#appdevformToolTip > div { margin:5px;}	
+	
+/*Tablelesss Form1*/
+div.label_on_side_choice_form { width:50%; }
+div.label_on_side_choice_form fieldset { background:#fff; border:8px solid #fff; margin-top:-15px; }
+div.label_on_side_choice_form fieldset legend { padding-top:35px; padding-bottom:5px; }
+div.label_on_side_choice_form fieldset ul li { padding:3px; background:#e7e7e7; }
+div.label_on_side_choice_form fieldset ul li.altrow { background:#cce5ff; }
+div.label_on_side_choice_form fieldset ul li label, div.label_on_side_choice_form fieldset ul li span { display:block; cursor:pointer; line-height:20px; padding-bottom:9px; text-shadow:0 -1px 0 rgba(0,0,0,.2); }
+
+/*Tablelesss Form2*/
+div.label_on_side_form { width:850px; }
+div.label_on_side_form fieldset { background:#fffeee; border:8px solid #fffeee; padding:5px 0; margin-top:-25px; }
+div.label_on_side_form fieldset legend { font-size:16px; text-transform:capitalize; padding-top:35px; padding-bottom:10px; } 
+div.label_on_side_form fieldset ul div.label_on_left { width:20%; float:left; position:relative; padding:5px; font-weight:900; }
+div.label_on_side_form fieldset ul div.value_on_right { width:25%; float:left; position:relative; padding:5px; }
+div.label_on_side_form fieldset ul div.value_on_right_span3 { width:75%; float:left; position:relative; padding:5px; }
+div.label_on_side_form span { display:block; font-size:11px; color:#666666; font-weight:normal;}
+div.label_on_side_form span img { vertical-align:text-top; }
+
+/*
+------------------------------------------
+	T A B L E S
+------------------------------------------ */		
+
+/*Table wrappers*/
+div.table_wrap_50 { width:50%; }
+div.table_wrap_80 { width:80%; }
+div.table_wrap_100 { width:100%; }
+div.white_bg { background:#fff; } /*Enclose 2 or more tables in this div*/
+
+/*Table: simple_tb*/
+table.simple_tb { width:100%; }
+table.simple_tb caption { background:#f4f4f4; padding: 10px; text-align:left; }
+table.simple_tb th { background:#666; color:#fff; padding:10px; text-align:left; }
+table.simple_tb td { color: #000; border-top: 1px solid #ccc; padding: 10px 15px; }
+
+/*Table: options_tb_sidebar*/
+table.options_tb_sidebar { width:100%; font-size:11px; border: 8px solid #fff; }
+table.options_tb_sidebar th { background:#fff; color:#000; padding:0px; text-align:center; font-weight:900; }
+table.options_tb_sidebar td { background:#e7e7e7; color:#333; padding:2px; text-align:left; }
+table.options_tb_sidebar td.altrow { background: #cce5ff; color:#333; padding:2px; text-align:left; }
+
+/*Table: survey_data_tb (with borders)*/
+table.survey_data_tb { width:100%; border: 2px solid #003300; }
+table.survey_data_tb caption { color: #fff; background:#336633; padding: 10px; text-align:left; }
+table.survey_data_tb th { color:#fff; background:#003300; padding:10px; border-right: 2px solid #000; text-align:center; font-weight:900; }
+table.survey_data_tb td { color:#000; background:#fff; padding:5px; border-right:1px solid #000; }
+table.survey_data_tb td.rowhead { font-weight:900; width:250px; }
+table.survey_data_tb td.rightrule-subtle { border-right:1px solid #ccc; }
+table.survey_data_tb td.rightrule-dark { border-right:2px solid #000; }
+table.survey_data_tb td.bottomrule { border-bottom:3px solid #336633; }
+
+/*Table: survey_options_tb (with alternate row color)*/
+table.survey_options_tb { width:100%; border:1px solid #003300; }
+table.survey_options_tb caption { color:#fff; background:#336633; padding: 10px; text-align:left; }
+table.survey_options_tb th { color:#fff; background:#003300; padding:10px; text-align:center; font-weight:900; text-transform:uppercase; }
+table.survey_options_tb td { color:#000; background:#ccffcc; padding:10px 15px; text-align:center; }
+table.survey_options_tb td.rowhead { text-align:left; }
+table.survey_options_tb td.altrow { color:#000; background:#99ff99; padding:10px 15px; }
+
+/*Table: label_on_side_tb */
+table.label_on_side_tb { width:100%; border:0px }
+table.label_on_side_tb td.fls { width:15%; color:#000; background:#fffeee; padding:10px; border:5px solid #fffeee; font-weight:900; }
+table.label_on_side_tb td.dfv { width:25%; color:#000; background:#ccffcc; padding:10px; border:5px solid #fffeee; }
+
+/*
+------------------------------------------
+	M I S C E L L A N E O U S
+------------------------------------------ */
+
+/*Tooltip*/	
+.tooltip { display: none; font-size: 12px; width: 160px; padding:15px; color: #eee; background:url(../images/dark-overlay.png); -webkit-box-shadow: 0px 0px 15px 0px #000; box-shadow: 0px 0px 15px 0px #000; border:#FFF 3px solid; border-radius:3px; }
+.tooltip.type_2 { width: 260px;}
+.tooltip.type_2 a { color:#9F0;}
+.tooltip_trigger { cursor: pointer; }
+	
+/*Instruction Text*/
+div.instruction { width:98%; background:#f4f4f4; padding:10px; margin-bottom:10px;}
+div.instruction h2 { text-align: center; }
+/*div.instruction p { color: ;}*/
+
+/*For instructions*/
+.dev_text { color:#B5002C; }
